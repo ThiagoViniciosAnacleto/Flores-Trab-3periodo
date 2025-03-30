@@ -1,86 +1,116 @@
-html, body {
-    height: 100%;
-    scroll-behavior: smooth;
-}
-
-/* Reseta estilos padrões */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* Header */
-header {
-    background-color: var(--cor-fundo);
-    padding: 10px 20px;
-    color: var(--cor-texto);
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    width: 20%; /* Ajuste o tamanho da logo conforme necessário */
-    margin-right: 5px; /* Espaçamento entre a logo e o nome */
-}
-
+/* Estilização da barra de navegação */
 .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.logo a {
-    text-decoration: none;
-    font-size: 1.5em;
-    font-weight: bold;
-    color: var(--cor-texto);
+/* Logo */
+.logo img {
+    height: 30px;
 }
 
+/* Links do menu */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
 }
 
 .nav-links a {
     text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px;
+}
+
+/* Ponto vermelho em "Serviços" */
+.nav-links .dot::after {
+    content: "•";
+    color: red;
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    right: -10px;
+}
+
+/* Ícones à direita */
+.nav-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-icons img {
+    height: 20px;
+}
+ 
+
+/* Footer */
+footer {
+    background-color: var(--cor-fundo);
     color: var(--cor-texto);
-    font-size: 1em;
+    padding: 20px 40px;
+    position: relative;
+}
+
+.social-icons a img {
+    width: 50px;
+    height: 50px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section a {
+    color: var(--cor-primaria);
+    text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover, .nav-links a:focus {
-    color: var(--cor-primaria);
+.footer-section a:hover {
+    text-decoration: underline;
 }
 
-/* Botões */
-.btn {
-    padding: 8px 15px;
-    font-size: 1em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+/* Rodapé inferior */
+.footer-bottom {
+    background-color: var(--cor-secundaria);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
 }
 
-.login {
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-}
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-.login:hover {
-    background-color: #555;
-}
-
-.register {
-    background-color: var(--cor-primaria);
-    color: var(--cor-texto);
-}
-
-.register:hover {
-    background-color: var(--cor-hover);
+    .footer-container {
+        flex-direction: column;
+    }
 }
