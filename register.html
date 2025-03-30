@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/logo.png" alt="WebMotors">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pesquisar.html">Pesquisar</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="ajuda.html">Ajuda</a></li> 
+            </ul>
+            <div class="nav-icons">
+                <a href="login.html"><img src="icons/user.svg" alt="Entrar"></a>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <form id="loginForm">
+            <h2>Painel de Registro</h2>
+            <br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required>
+            <span id="emailError" class="error"></span>
+            
+            <label for="password">Senha:</label>
+            <input type="password" id="password" required>
+            <span id="passwordError" class="error"></span>
+            
+            <button type="submit">Entrar</button>
+            <p id="loginError" class="error"></p>
+        </form>
+    </div>
+    <br>
+    <a href="register.html"><p>já tem conta? Entre aqui!</p></a>
+    
+    <script src="script.js"></script>
+</body>
+</html>

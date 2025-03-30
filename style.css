@@ -58,6 +58,78 @@
 .nav-icons img {
     height: 20px;
 }
+
+
+/* Layout principal */
+main {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Barra lateral */
+aside {
+    width: 250px;
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+aside h2, aside h3 {
+    margin-bottom: 10px;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li {
+    margin-bottom: 8px;
+}
+
+aside input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+/* Seção de carros */
+.carros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.carro {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: calc(33.33% - 20px);
+}
+
+.carro img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.carro h3 {
+    margin: 10px 0;
+}
+
+.carro a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
  
 
 /* Footer */
