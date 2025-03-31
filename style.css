@@ -175,6 +175,42 @@ footer {
     font-size: 0.9em;
 }
 
+/* Rodapé endereço */
+
+#endereco {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.endereco-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+.endereco-container p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.endereco-container address {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .navbar {
