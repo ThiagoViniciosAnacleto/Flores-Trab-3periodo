@@ -8,92 +8,85 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Cabeçalho e Navegação -->
     <header>
-        <nav class="navbar">
+        <nav class="navbar" role="navigation">
             <div class="logo">
-                <a href="index.html">
-                    <img src="img/logo.png" alt="WebMotors">
+                <a href="index.html" aria-label="Ir para a página inicial">
+                    <img src="img/logo.png" alt="Logo DriveWay">
                 </a>
             </div>
-            <ul class="nav-links">
+            <ul class="nav-links" role="list">
                 <li><a href="pesquisar.html">Pesquisar</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="ajuda.html">Ajuda</a></li> 
+                <li><a href="ajuda.html">Ajuda</a></li>
             </ul>
             <div class="nav-icons">
-                <a href="login.html"><img src="img/login.png" alt="Entrar"></a>
+                <a href="login.html" aria-label="Entrar">
+                    <img src="img/login.png" alt="Entrar">
+                </a>
             </div>
         </nav>
     </header>
+    
+    <!-- Conteúdo Principal -->
     <main>
         <section class="carros-destaque">
             <h2>Carros em Destaque</h2>
             <div class="catalogo-carros">
-                <div class="card-carro">
+                <article class="card-carro">
                     <img src="img/carros/civic.jpg" alt="Honda Civic 2020">
                     <h3>Honda Civic 2020</h3>
                     <p>Motor 2.0, Automático, Completo, 50.000km rodados.</p>
                     <button>Ótimo veículo!</button>
-                </div>
-                <div class="card-carro">
+                </article>
+                <article class="card-carro">
                     <img src="img/carros/gol.jpg" alt="Volkswagen Gol 2015">
                     <h3>Volkswagen Gol 2015</h3>
                     <p>1.6 Flex, Manual, Travas e vidros elétricos.</p>
                     <button>Ótimo veículo!</button>
-                </div>
-                <div class="card-carro">
+                </article>
+                <article class="card-carro">
                     <img src="img/carros/corolla.jpg" alt="Toyota Corolla 2019">
                     <h3>Toyota Corolla 2019</h3>
                     <p>Motor 2.0, Automático, Bancos de couro, Multimídia.</p>
                     <button>Ótimo veículo!</button>
-                </div>
-                <div class="card-carro">
+                </article>
+                <article class="card-carro">
                     <img src="img/carros/renegade.jpg" alt="Jeep Renegade 2021">
                     <h3>Jeep Renegade 2021</h3>
                     <p>4x4, Diesel, Automático, 25.000km rodados.</p>
                     <button>Ótimo veículo!</button>
-                </div>
+                </article>
             </div>
         </section>
-        
     </main>
+    
+    <!-- Rodapé -->
     <footer>
         <div class="footer-container">
-            <div class="footer-section logo-section">
+            <!-- Seção de Logo e Endereço -->
+            <section class="footer-section logo-section">
                 <h2>DriveWay</h2>
                 <address>
-                    <section id="endereco">
-                        <div class="endereco-container">
-                            <h2>Nosso Endereço</h2>
-                            <p>Visite-nos em nossa sede para conhecer mais sobre nossos serviços e produtos!</p>
-                            <address>
-                                Rua Itajubá, 673, Curitiba - PR
-                            </address>
-                            <div class="map-container">
-                                <iframe 
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.0233748689816!2d-49.28594822510963!3d-25.469897777742493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce46c0e88a5f9%3A0x6e0f2e6ff8f0e5d0!2sRua%20Itajub%C3%A1%2C%20673%20-%20Port%C3%A3o%2C%20Curitiba%20-%20PR%2C%2081070-190!5e0!3m2!1spt-BR!2sbr!4v1697907074293!5m2!1spt-BR!2sbr" 
-                                    width="100%" 
-                                    height="400" 
-                                    style="border:0;" 
-                                    allowfullscreen="" 
-                                    loading="lazy" 
-                                    referrerpolicy="no-referrer-when-downgrade">
-                                </iframe>
-                            </div>
-                        </div>
-                    </section>  
+                    <h3>Nosso Endereço</h3>
+                    <p>Visite-nos em nossa sede para conhecer mais sobre nossos serviços e produtos!</p>
+                    <p>Rua Itajubá, 673, Curitiba - PR</p>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.0233748689816!2d-49.28594822510963!3d-25.469897777742493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce46c0e88a5f9%3A0x6e0f2e6ff8f0e5d0!2sRua%20Itajub%C3%A1%2C%20673%20-%20Port%C3%A3o%2C%20Curitiba%20-%20PR%2C%2081070-190!5e0!3m2!1spt-BR!2sbr!4v1697907074293!5m2!1spt-BR!2sbr" 
+                            width="100%" 
+                            height="400" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
                 </address>
-                <p><strong>Siga-nos</strong></p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com"><img src="img/media-social-icons/facebook.png" alt="Facebook"></a>
-                    <a href="https://www.youtube.com"><img src="img/media-social-icons/youtube.png" alt="YouTube"></a>
-                    <a href="https://www.linkedin.com"><img src="img/media-social-icons/linkedin.png" alt="LinkedIn"></a>
-                    <a href="https://www.x.com"><img src="img/media-social-icons/twitter-x.png" alt="Twitter"></a>
-                    <a href="https://www.instagram.com"><img src="img/media-social-icons/instagram.png" alt="Instagram"></a>
-                </div>
-            </div>
+            </section>
     
-            <div class="footer-section">
+            <!-- Seção de Central de Relacionamento -->
+            <section class="footer-section">
                 <h3>Central de Relacionamento</h3>
                 <p><strong>ATENDIMENTO</strong> - 06h00 às 22h00</p>
                 <p>Capitais e regiões metropolitanas:</p>
@@ -103,19 +96,34 @@
                 <button>9999-9999</button>
                 <p>WhatsApp:</p>
                 <button>9999-9999</button>
-                <button>FALE CONOSCO</button>
-            </div>
+                <button>Entre em contato conosco</button>
+            </section>
     
-            <div class="footer-section">
+            <!-- Seção de Ouvidoria -->
+            <section class="footer-section">
                 <h3>Ouvidoria</h3>
                 <p><strong>SEGUNDA À SEXTA</strong> - 9:15 às 17:30<br>Exceto feriados</p>
                 <p>Todas as regiões:</p>
                 <button>0800-999-999</button>
                 <p>Deficiência auditiva e de fala:</p>
                 <button>0800-999-999</button>
-                <button>FALE CONOSCO</button>
-            </div>
+                <button>Entre em contato conosco</button>
+            </section>
+    
+            <!-- Ícones de Redes Sociais -->
+            <section class="footer-section social-icons-container">
+                <h3>Siga-nos</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com" class="social-icon" aria-label="Facebook"><img src="img/media-social-icons/facebook.png" alt="Facebook"></a></li>
+                    <li><a href="https://www.youtube.com" class="social-icon" aria-label="YouTube"><img src="img/media-social-icons/youtube.png" alt="YouTube"></a></li>
+                    <li><a href="https://www.linkedin.com" class="social-icon" aria-label="LinkedIn"><img src="img/media-social-icons/linkedin.png" alt="LinkedIn"></a></li>
+                    <li><a href="https://www.x.com" class="social-icon" aria-label="Twitter"><img src="img/media-social-icons/twitter-x.png" alt="Twitter"></a></li>
+                    <li><a href="https://www.instagram.com" class="social-icon" aria-label="Instagram"><img src="img/media-social-icons/instagram.png" alt="Instagram"></a></li>
+                </ul>
+            </section>
         </div>
+    
+        <!-- Rodapé inferior -->
         <div class="footer-bottom">
             <p>©2024 DriveWay - Todos os direitos reservados CNPJ: 12.345.678/9999-10</p>
         </div>

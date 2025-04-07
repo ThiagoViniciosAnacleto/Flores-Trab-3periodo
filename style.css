@@ -6,6 +6,15 @@
     font-family: Arial, sans-serif;
 }
 
+/* Cores (Considerar o uso de variáveis para facilitar a manutenção) */
+:root {
+    --cor-fundo: #f4f4f4;
+    --cor-texto: #333;
+    --cor-primaria: #007bff;
+    --cor-secundaria: #f7f7f7;
+    --cor-hover: #0056b3;
+}
+
 /* Estilização da barra de navegação */
 .navbar {
     display: flex;
@@ -28,13 +37,9 @@
     gap: 20px;
 }
 
-.nav-links li {
-    position: relative;
-}
-
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: var(--cor-texto);
     font-size: 16px;
     padding: 10px;
 }
@@ -59,7 +64,6 @@
     height: 20px;
 }
 
-
 /* Layout principal */
 main {
     display: flex;
@@ -67,50 +71,42 @@ main {
     margin: 20px auto;
 }
 
-/* Barra lateral */
-aside {
-    width: 250px;
-    background: #f4f4f4;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-aside h2, aside h3 {
-    margin-bottom: 10px;
-}
-
-aside ul {
-    list-style: none;
-}
-
-aside ul li {
-    margin-bottom: 8px;
-}
-
-aside input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-}
-
-/* Seção de carros */
+/* Seção de carros - Layout flexível corrigido */
 .carros {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
     width: 100%;
+    justify-content: space-between; /* Distribui os itens ao longo da linha */
 }
 
+/* Cards de carros */
 .carro {
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     overflow: hidden;
     padding: 20px;
-    transition: transform 0.2s;
+    width: calc(25% - 20px); /* Define o tamanho do cartão */
+    box-sizing: border-box; /* Garante que a largura inclua o padding */
+    transition: transform 0.2s ease;
 }
 
+/* Ajuste para dispositivos móveis */
+@media (max-width: 768px) {
+    .carro {
+        width: calc(50% - 20px); /* Para 2 colunas em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .carro {
+        width: 100%; /* Para 1 coluna em telas muito pequenas */
+    }
+}
+
+/* Imagens dos carros */
 .carro img {
     width: 100%;
     height: 160px;
@@ -118,117 +114,33 @@ aside input {
     border-radius: 8px;
 }
 
+/* Estilização dos textos e botões */
 .carro h3 {
     margin: 15px 0 10px;
     font-size: 1.3em;
 }
 
-.carro a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 12px;
-    background: #333;
+.carro button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--cor-primaria);
     color: white;
-    text-decoration: none;
-    border-radius: 4px;
-}
-
- 
-
-/* Footer */
-footer {
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    padding: 20px 40px;
-    position: relative;
-}
-
-.social-icons a img {
-    width: 50px;
-    height: 50px;
-}
-
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 250px;
-}
-
-.footer-section a {
-    color: var(--cor-primaria);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-section a:hover {
-    text-decoration: underline;
-}
-
-/* Rodapé inferior */
-.footer-bottom {
-    background-color: var(--cor-secundaria);
-    text-align: center;
-    padding: 10px 0;
-    font-size: 0.9em;
-}
-
-/* Rodapé endereço */
-
-#endereco {
-    padding: 50px 20px;
-    background-color: #f8f9fa;
-    text-align: center;
-}
-
-.endereco-container h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #003366;
-}
-
-.endereco-container p {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.endereco-container address {
-    font-style: normal;
+    border: none;
+    border-radius: 8px;
     font-weight: bold;
-    font-size: 1.2em;
-    color: #444;
-    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.map-container {
-    max-width: 800px;
-    margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
+.carro button:hover {
+    background-color: var(--cor-hover);
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .footer-container {
-        flex-direction: column;
-    }
-}
-
+/* Estilização da seção "Carros em Destaque" */
 .carros-destaque {
     padding: 40px 20px;
-    background-color: #f7f7f7;
+    background-color: var(--cor-secundaria);
 }
 
 .carros-destaque h2 {
@@ -238,23 +150,26 @@ footer {
     color: #222;
 }
 
+/* Container do catálogo de carros */
 .catalogo-carros {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: grid; /* Usar grid para distribuir os carros */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Cria colunas flexíveis */
     gap: 30px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto; /* Centraliza o conteúdo */
 }
 
+/* Estilização dos cards de carros */
 .card-carro {
     background-color: white;
     border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     padding: 20px;
-    transition: transform 0.2s;
+    transition: transform 0.2s ease;
 }
 
+/* Efeito de hover nos cards */
 .card-carro:hover {
     transform: scale(1.02);
 }
@@ -276,11 +191,12 @@ footer {
     color: #555;
 }
 
+/* Estilização dos botões */
 .card-carro button {
     margin-top: 15px;
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: var(--cor-primaria);
     color: white;
     border: none;
     border-radius: 8px;
@@ -290,86 +206,126 @@ footer {
 }
 
 .card-carro button:hover {
-    background-color: #0056b3;
+    background-color: var(--cor-hover);
 }
 
-/* Container da área de login */
-.login-container {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    margin: 40px auto;
+
+/* Estilização do rodapé */
+footer {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    padding: 20px 40px;
+    position: relative;
 }
 
-/* Título */
-.login-title {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-/* Labels */
-.login-label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-    color: #444;
-}
-
-/* Inputs */
-.login-input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    transition: border-color 0.3s;
-}
-
-.login-input:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-/* Botão de login */
-.login-button {
+.social-icons-container {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     margin-top: 20px;
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 6px;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-.login-button:hover {
-    background-color: #0056b3;
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    padding-left: 0;
+    list-style: none;
 }
 
-/* Mensagens de erro */
-.login-error {
-    color: red;
+.social-icons li {
+    display: inline-block;
+}
+
+.social-icons a img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Container do rodapé */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Seção do rodapé */
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Estilos para links */
+.footer-section a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé inferior */
+.footer-bottom {
+    background-color: var(--cor-secundaria);
+    text-align: center;
+    padding: 10px 0;
     font-size: 0.9em;
 }
 
-/* Link de registro */
-.register-link {
-    text-decoration: none;
+/* Mapa */
+.map-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.register-text {
+/* Ajustes para a responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .map-container {
+        max-width: 100%;
+        height: 250px;
+    }
+}
+
+/* Carros em Destaque */
+.carros-destaque {
+    padding: 40px 20px;
+    background-color: var(--cor-secundaria);
+}
+
+.carros-destaque h2 {
     text-align: center;
-    color: #007bff;
-    font-size: 0.95em;
-    transition: color 0.2s;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #222;
 }
 
-.register-text:hover {
-    color: #0056b3;
+.catalogo-carros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
