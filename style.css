@@ -66,7 +66,6 @@
 
 /* Layout principal */
 main {
-    display: flex;
     max-width: 1200px;
     margin: 20px auto;
 }
@@ -150,13 +149,13 @@ main {
     color: #222;
 }
 
-/* Container do catálogo de carros */
+/* Container do catálogo de carros - ajustado para responsividade */
 .catalogo-carros {
-    display: grid; /* Usar grid para distribuir os carros */
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Cria colunas flexíveis */
     gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto; /* Centraliza o conteúdo */
+    max-width: 100%; /* Garante que a largura ocupe 100% do container pai */
+    margin: 0 auto;  /* Centraliza o conteúdo */
 }
 
 /* Estilização dos cards de carros */
@@ -183,7 +182,6 @@ main {
 
 .card-carro h3 {
     margin: 15px 0 10px;
-    font-size: 1.3em;
 }
 
 .card-carro p {
@@ -207,6 +205,19 @@ main {
 
 .card-carro button:hover {
     background-color: var(--cor-hover);
+}
+
+/* Ajustes para a responsividade */
+@media (max-width: 768px) {
+    .catalogo-carros {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Ajusta as colunas para 2 em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .catalogo-carros {
+        grid-template-columns: 1fr; /* Para 1 coluna em telas pequenas */
+    }
 }
 
 /* Estilização do rodapé */
@@ -285,46 +296,4 @@ footer {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Ajustes para a responsividade */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .footer-container {
-        flex-direction: column;
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
-
-    .map-container {
-        max-width: 100%;
-        height: 250px;
-    }
-}
-
-/* Carros em Destaque */
-.carros-destaque {
-    padding: 40px 20px;
-    background-color: var(--cor-secundaria);
-}
-
-.carros-destaque h2 {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 30px;
-    color: #222;
-}
-
-.catalogo-carros {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
