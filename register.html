@@ -36,39 +36,40 @@
             </div>
         </nav>
     </header>
-    <main>
-        <section class="registro-container">
-      
-          <figure class="registro-imagem">
-            <img src="img/gt3.webp" alt="Imagem de um carro esportivo Porsche GT3 RS">
-            <figcaption>Seu próximo carro pode estar mais perto do que você imagina.</figcaption>
-          </figure>
-      
-          <section class="registro">
-            <h2>Crie sua conta</h2>
-      
-            <form id="registerForm" action="#" method="post">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Digite seu email" required>
-              <span id="emailError" class="erro"></span>
-      
-              <label for="password">Senha</label>
-              <input type="password" id="password" name="senha" placeholder="Digite uma senha" required>
-              <span id="passwordError" class="erro"></span>
-      
-              <label for="confirmar-senha">Confirmar Senha</label>
-              <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Confirme sua senha" required>
-      
-              <span id="registerError" class="erro geral"></span>
-      
-              <button type="submit">Registrar</button>
-            </form>
-      
-            <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
-          </section>
-      
-        </section>
-      </main>  
+
+    <main class="form-container">
+        <figure class="form-image">
+            <img src="img/img-registro.webp" alt="Imagem decorativa de registro">
+            <figcaption>Crie sua conta agora mesmo!</figcaption>
+        </figure>
+    
+        <form id="registerForm" class="form-box">
+            <h2>Registro</h2>
+    
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <span id="nomeError" class="form-error"></span>
+    
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <span id="emailError" class="form-error"></span>
+    
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+            <span id="passwordError" class="form-error"></span>
+    
+            <label for="confirmPassword">Confirmar Senha:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <span id="confirmPasswordError" class="form-error"></span>
+    
+            <button type="submit">Registrar</button>
+            <p id="registerError" class="form-error"></p>
+                    
+            <a href="login.html" class="login-link">
+                <span class="login-text">Já tem uma conta? Faça login!</span>
+            </a>
+        </form>
+    </main>
             <!-- Rodapé -->
     <footer>
         <div class="footer-container">
