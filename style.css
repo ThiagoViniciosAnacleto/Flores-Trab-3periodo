@@ -429,6 +429,107 @@ footer {
     height: 40px;
 }
 
+
+.registro-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.registro-imagem {
+    max-width: 500px;
+    width: 100%;
+}
+
+.registro-imagem img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.registro-imagem figcaption {
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: 8px;
+    color: #555;
+}
+
+.registro {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.registro h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.registro form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.registro label {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.registro input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.registro button {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.registro button:hover {
+    background-color: #0056b3;
+}
+
+.registro p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+    .registro {
+        padding: 20px 10px;
+    }
+
+    .registro h2 {
+        font-size: 1.5em;
+    }
+
+    .registro input,
+    .registro select,
+    .registro textarea {
+        font-size: 0.9em;
+    }
+}
+
+
 /* Container do rodapé */
 .footer-container {
     display: flex;
@@ -471,3 +572,15 @@ footer {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.erro {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .geral {
+    text-align: center;
+    margin-top: 10px;
+  }

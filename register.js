@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const email = document.getElementById("email").value.trim();
         const password = document.getElementById("password").value.trim();
+        const confirmPassword = document.getElementById("confirmar-senha").value.trim();
+
         const emailError = document.getElementById("emailError");
         const passwordError = document.getElementById("passwordError");
         const registerError = document.getElementById("registerError");
@@ -29,6 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
             isValid = false;
         }
 
+        if (password !== confirmPassword) {
+            passwordError.textContent = "As senhas não coincidem.";
+            isValid = false;
+        }
+
         if (isValid) {
             const users = JSON.parse(localStorage.getItem("users")) || [];
 
@@ -42,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem("users", JSON.stringify(users));
 
             alert("Cadastro realizado com sucesso!");
-            window.location.href = "login.html";
+            window.location.href = "login.html"; // redirecionamento correto
         }
     });
 
