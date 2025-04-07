@@ -10,9 +10,9 @@
 :root {
     --cor-fundo: #f4f4f4;
     --cor-texto: #333;
-    --cor-primaria: #007bff;
+    --cor-primaria: #007bff; /* Cor azul */
     --cor-secundaria: #f7f7f7;
-    --cor-hover: #0056b3;
+    --cor-hover: #0056b3; /* Azul escuro para hover */
 }
 
 /* Estilização da barra de navegação */
@@ -43,10 +43,17 @@
 
 /* Links de navegação */
 .nav-links a {
+    background-color: black;
+    border-radius: 2px;
     text-decoration: none;
-    color: var(--cor-texto);
+    color: var(--cor-primaria); /* Azul para links */
     font-size: 16px;
-    padding: 10px;
+    padding: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--cor-hover); /* Azul mais escuro para o hover */
 }
 
 /* Ícones à direita */
@@ -58,6 +65,11 @@
 /* Ícones de navegação */
 .nav-icons img {
     height: 20px;
+    transition: filter 0.3s ease;
+}
+
+.nav-icons img:hover {
+    filter: brightness(0.8); /* Escurece os ícones no hover */
 }
 
 /* Hamburger Menu */
