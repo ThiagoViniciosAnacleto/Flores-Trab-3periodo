@@ -35,41 +35,52 @@
 /* Menu de navegação */
 .nav-links {
     list-style: none;
-    display: flex; /* Exibe os links de navegação em telas grandes */
-    gap: 20px;
+    display: flex;
+    gap: 24px;
     margin: 0;
-    z-index: 1; /* Certifique-se de que o menu de navegação fica abaixo do título */
+    padding: 0;
+    align-items: center;
+    z-index: 1;
 }
 
 /* Links de navegação */
 .nav-links a {
-    background-color: black;
-    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 6px;
     text-decoration: none;
-    color: var(--cor-primaria); /* Azul para links */
+    color: var(--cor-primaria);
     font-size: 16px;
-    padding: 1px;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    padding: 8px 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: var(--cor-hover); /* Azul mais escuro para o hover */
+    background-color: var(--cor-primaria);
+    color: #fff;
+    transform: translateY(-2px);
 }
 
-/* Ícones à direita */
+
 .nav-icons {
     display: flex;
-    gap: 25px;
+    flex-direction: column; /* em mobile eles estão um embaixo do outro */
+    align-items: center;
+    gap: 20px; /* aumenta o espaçamento vertical entre os ícones */
+    margin-top: 15px; /* se precisar mais espaço do topo */
 }
 
 /* Ícones de navegação */
 .nav-icons img {
-    height: 20px;
-    transition: filter 0.3s ease;
+    height: 22px;
+    filter: brightness(1);
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .nav-icons img:hover {
-    filter: brightness(0.8); /* Escurece os ícones no hover */
+    filter: brightness(0.8);
+    transform: scale(1.1);
 }
 
 /* Hamburger Menu */
@@ -80,6 +91,7 @@
     width: 30px;
     height: 24px;
     cursor: pointer;
+    margin-top: 15px; /* aumenta o espaço abaixo do ícone do menu */
 }
 
 .hamburger div {
@@ -127,6 +139,7 @@ main {
 
     /* Quando o menu está visível */
     .navbar.active .nav-links {
+        margin-top: 18px;
         display: flex;
         position: absolute;
         top: 60px;
@@ -144,7 +157,7 @@ main {
         display: flex;
         justify-content: center;
         gap: 25px;
-        margin-top: 115px;  /* Distância entre os ícones e o menu */
+        margin-top: 45px;  /* Distância entre os ícones e o menu */
         z-index: 0;
     }
     /* Efeito do hamburger */
