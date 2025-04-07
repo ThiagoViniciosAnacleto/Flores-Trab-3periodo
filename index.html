@@ -8,26 +8,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Cabeçalho e Navegação -->
-    <header>
-        <nav class="navbar" role="navigation">
-            <div class="logo">
-                <a href="index.html" aria-label="Ir para a página inicial">
-                    <img src="img/logo.png" alt="Logo DriveWay">
-                </a>
-            </div>
-            <ul class="nav-links" role="list">
-                <li><a href="pesquisar.html">Pesquisar</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="ajuda.html">Ajuda</a></li>
-            </ul>
-            <div class="nav-icons">
-                <a href="login.html" aria-label="Entrar">
-                    <img src="img/login.png" alt="Entrar">
-                </a>
-            </div>
-        </nav>
-    </header>
+ <!-- Cabeçalho e Navegação -->
+ <header>
+    <nav class="navbar" role="navigation">
+        <div class="logo">
+            <a href="index.html" aria-label="Ir para a página inicial">
+                <img src="img/logo.png" alt="Logo DriveWay">
+            </a>
+        </div>
+        
+        <!-- Botão de hamburger (visível apenas em telas pequenas) -->
+        <div class="hamburger" aria-label="Abrir menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+        <!-- Menu de navegação -->
+        <ul class="nav-links" role="list">
+            <li><a href="pesquisar.html">Pesquisar</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="ajuda.html">Ajuda</a></li>
+        </ul>
+        
+        <div class="nav-icons">
+            <a href="login.html" aria-label="Entrar">
+                <img src="img/login.png" alt="Entrar">
+            </a>
+        </div>
+    </nav>
+</header>
     
     <!-- Conteúdo Principal -->
     <main>
@@ -128,5 +138,6 @@
             <p>©2024 DriveWay - Todos os direitos reservados CNPJ: 12.345.678/9999-10</p>
         </div>
     </footer>    
+    <script src="script.js"></script>
 </body>
 </html>
