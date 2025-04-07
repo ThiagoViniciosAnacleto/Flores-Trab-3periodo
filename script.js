@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
             navIcons.classList.toggle("active");
 
             if (navbar.classList.contains("active")) {
-                carrosDestaqueTitle.style.marginTop = "75px";
+                carrosDestaqueTitle.style.marginTop = "55px";
             } else {
                 carrosDestaqueTitle.style.marginTop = "0";
             }
