@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
 
         const email = document.getElementById("email").value.trim();
-        const password = document.getElementById("password").value.trim();
-        const confirmPassword = document.getElementById("confirmar-senha").value.trim();
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
 
         const emailError = document.getElementById("emailError");
         const passwordError = document.getElementById("passwordError");
