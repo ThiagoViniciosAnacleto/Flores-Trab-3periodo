@@ -16,25 +16,29 @@
                 <img src="img/logo.png" alt="Logo DriveWay">
             </a>
         </div>
-        
+    
         <!-- Botão de hamburger (visível apenas em telas pequenas) -->
         <div class="hamburger" aria-label="Abrir menu">
             <div></div>
             <div></div>
             <div></div>
         </div>
-        
-        <!-- Menu de navegação -->
-        <ul class="nav-links" role="list">
-            <li><a href="ajuda.html">Ajuda</a></li>
+    
+        <!-- Links de navegação -->
+        <ul class="nav-links" id="menu-principal" role="menubar">
+            <li role="none"><a role="menuitem" href="ajuda.html">Ajuda</a></li>
+            <li role="none" id="userStatus" style="display: flex; align-items: center; gap: 10px;">
+                <!-- Conteúdo preenchido via JavaScript -->
+            </li>
         </ul>
-        
-        <div class="nav-icons">
+    
+        <div class="nav-icons" id="navLoginIcon">
             <a href="login.html" aria-label="Entrar">
-                <img src="img/login.png" alt="Entrar">
+                <img src="img/login.png" alt="Ícone de login" loading="lazy">
             </a>
         </div>
     </nav>
+    
 </header>
     
     <!-- Conteúdo Principal -->
@@ -46,73 +50,73 @@
                     <img src="img/carros/civic.jpg" alt="Honda Civic 2020">
                     <h3>Honda Civic 2020</h3>
                     <p>Motor 2.0, Automático, Completo.</p>
-                    <button>Comprar</button>
+                    <button class="botao-destaque comprar-btn">Comprar</button>
                 </article>
                 <article class="card-carro">
                     <img src="img/carros/gol.jpg" alt="Volkswagen Gol 2015">
                     <h3>Volkswagen Gol 2015</h3>
                     <p>Motor 1.6L, Flex, Manual.</p>
-                    <button>Comprar</button>
+                    <button class="botao-destaque comprar-btn">Comprar</button>
                 </article>
                 <article class="card-carro">
                     <img src="img/carros/corolla.jpg" alt="Toyota Corolla 2019">
                     <h3>Toyota Corolla 2019</h3>
                     <p>Motor 2.0L, Automático.</p>
-                    <button>Comprar</button>
+                    <button class="botao-destaque comprar-btn">Comprar</button>
                 </article>
                 <article class="card-carro">
                     <img src="img/carros/renegade.jpg" alt="Jeep Renegade 2021">
                     <h3>Jeep Renegade 2021</h3>
                     <p>Motor 2.0L, 4x4, Automático.</p>
-                    <button>Comprar</button>
+                    <button class="botao-destaque comprar-btn">Comprar</button>
                 </article>
                 <article class="card-carro">
                     <img src="img/carros/mustang.jpg" alt="Ford Mustang 2013">
                     <h3>Ford Mustang 2013</h3>
                     <p>Potência: 450cv - Motor V8 5.0L</p>
-                    <button>Comprar</button>
+                    <button class="botao-destaque comprar-btn">Comprar</button>
                 </article>
                 <article class="card-carro">
                     <img src="img/carros/camaro.jpg" alt="Chevrolet Camaro 2015">
                     <h3>Chevrolet Camaro 2015</h3>
                     <p>Potência: 455cv - Motor V8 6.2L</p>
-                    <button>Comprar</button>
+                    <button class="botao-destaque comprar-btn">Comprar</button>
                 </article>
                 <article class="card-carro">
                     <img src="img/carros/m4.jpg" alt="BMW M4 2019">
                     <h3>BMW M4 2019</h3>
                     <p>Potência: 510cv - Motor I6 3.0L</p>
-                    <button>Comprar</button>
+                    <button class="botao-destaque comprar-btn">Comprar</button>
                 </article>
                 <article class="card-carro">
                     <img src="img/carros/r8.jpg" alt="Honda Civic 2020">
                     <h3>Audi R8 2021</h3>
                     <p>Potência: 600cv - Motor V10 5.0L</p>
-                    <button>Comprar</button>
+                    <button class="botao-destaque comprar-btn">Comprar</button>
                 </article>
                 <article class="card-carro">
                     <img src="img/carros/clio.jpg" alt="Ford Mustang 2013">
                     <h3>Renault Clio 2013</h3>
                     <p>Motor 1.0L, Manual</p>
-                    <button>Comprar</button>
+                    <button class="botao-destaque comprar-btn">Comprar</button>
                 </article>
                 <article class="card-carro">
                     <img src="img/carros/golf.jpg" alt="Chevrolet Camaro 2015">
                     <h3>Volkswagen Golf 2018</h3>
                     <p>Motor 1.4L, Automático</p>
-                    <button>Comprar</button>
+                    <button class="botao-destaque comprar-btn">Comprar</button>
                 </article>
                 <article class="card-carro">
                     <img src="img/carros/celta.jpg" alt="BMW M4 2019">
                     <h3>Chevrolet Celta 2013</h3>
                     <p>Motor 1.0L, Manual</p>
-                    <button>Comprar</button>
+                    <button class="botao-destaque comprar-btn">Comprar</button>
                 </article>
                 <article class="card-carro">
                     <img src="img/carros/208.jpg" alt="Honda Civic 2020">
                     <h3>Peugeot 208 2015</h3>
                     <p>Motor 1.0, Manual</p>
-                    <button>Comprar</button>
+                    <button class="botao-destaque comprar-btn">Comprar</button>
                 </article>
             </div>
         </section>

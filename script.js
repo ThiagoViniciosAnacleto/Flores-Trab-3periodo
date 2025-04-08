@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Código para o formulário de login
+    // =====================
+    // FORMULÁRIO DE LOGIN
+    // =====================
     const loginForm = document.getElementById("loginForm");
 
     if (loginForm) {
@@ -42,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
 
                 const userFound = storedUsers.find(user => user.email === email && user.password === password);
-                
+
                 if (userFound) {
                     localStorage.setItem("userSession", email);
                     window.location.href = "index.html";
@@ -58,7 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
         return emailRegex.test(email);
     }
 
-    // Código para o menu hambúrguer
+    // =====================
+    // MENU HAMBÚRGUER
+    // =====================
     const hamburger = document.querySelector(".hamburger");
     const navbar = document.querySelector(".navbar");
     const carrosDestaqueTitle = document.querySelector(".carros-destaque h2");
@@ -69,13 +73,67 @@ document.addEventListener("DOMContentLoaded", function () {
             navbar.classList.toggle("active");
             navIcons.classList.toggle("active");
 
-            if (navbar.classList.contains("active")) {
-                carrosDestaqueTitle.style.marginTop = "55px";
-            } else {
-                carrosDestaqueTitle.style.marginTop = "0";
-            }
+            carrosDestaqueTitle.style.marginTop = navbar.classList.contains("active") ? "55px" : "0";
         });
     } else {
         console.error("Hamburger ou Navbar ou Título não encontrados!");
+    }
+
+    // =====================
+    // BOTÃO "COMPRAR"
+    // =====================
+    const botoesComprar = document.querySelectorAll(".comprar-btn");
+
+    botoesComprar.forEach((botao) => {
+        botao.addEventListener("click", () => {
+            const usuarioLogado = localStorage.getItem("userSession");
+
+            if (usuarioLogado) {
+                alert("Compra realizada com sucesso! 🚗💨");
+            } else {
+                alert("Você precisa estar logado para comprar.");
+                window.location.href = "login.html";
+            }
+        });
+    });
+
+    // =====================
+    // STATUS DO USUÁRIO + LOGOUT DINÂMICO
+    // =====================
+    const userStatus = document.getElementById("userStatus");
+    const usuarioLogado = localStorage.getItem("userSession");
+
+    if (userStatus) {
+        if (usuarioLogado) {
+            // Insere o nome + botão
+            userStatus.innerHTML = `
+                <span style="font-weight: bold; color: #4CAF50;">Bem-vindo, ${usuarioLogado}</span>
+                <button id="logoutBtn" style="margin-left: 10px; padding: 5px 10px;">Sair</button>
+            `;
+
+            // Adiciona evento ao botão
+            const logoutBtn = document.getElementById("logoutBtn");
+            logoutBtn.addEventListener("click", () => {
+                localStorage.removeItem("userSession");
+                alert("Você saiu com sucesso.");
+                location.reload();
+            });
+        } else {
+            userStatus.textContent = "Você não está logado.";
+            userStatus.style.color = "#f44336";
+        }
+    }
+
+    // =====================
+    // ÍCONE DE LOGIN
+    // =====================
+    const loginIcon = document.getElementById("navLoginIcon");
+
+    if (loginIcon) {
+        if (usuarioLogado) {
+            loginIcon.style.display = "none";
+        } else {
+            loginIcon.style.display = "block";
+        }
     }
 });
