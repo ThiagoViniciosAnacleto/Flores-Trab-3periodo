@@ -113,6 +113,9 @@ main {
     .navbar {
         flex-direction: column;
         align-items: center;  /* Centraliza a navbar */
+        transition: transform 0.8s ease-in-out;
+        transform: translateY(5%); /* Efeito na navbar */
+        pointer-events: none;
     }
 
     .hamburger {
@@ -138,6 +141,11 @@ main {
     }
 
     /* Quando o menu está visível */
+
+    .navbar.active {
+        transform: translateY(100%);
+        pointer-events: auto;
+    }
     .navbar.active .nav-links {
         margin-top: 18px;
         display: flex;
@@ -301,7 +309,7 @@ main {
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
 }
 
 .carro button:hover {
@@ -342,7 +350,7 @@ main {
     padding: 20px;
     width: calc(25% - 20px); /* Define o tamanho do cartão */
     box-sizing: border-box; /* Garante que a largura inclua o padding */
-    transition: transform 0.2s ease;
+    transition: transform 0.4s ease;
 }
 
 /* Estilização dos cards de carros */
