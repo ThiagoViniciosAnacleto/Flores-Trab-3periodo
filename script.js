@@ -67,16 +67,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelector(".navbar");
     const carrosDestaqueTitle = document.querySelector(".carros-destaque h2");
     const navIcons = document.querySelector(".nav-icons");
+    const navLinks = document.querySelector(".nav-links");
 
-    if (hamburger && navbar && carrosDestaqueTitle) {
+    if (hamburger && navbar && navLinks) {
         hamburger.addEventListener("click", function () {
             navbar.classList.toggle("active");
-            navIcons.classList.toggle("active");
+            navIcons?.classList.toggle("active");
+            hamburger.classList.toggle("active");
+            navLinks.classList.toggle("active");
 
-            carrosDestaqueTitle.style.marginTop = navbar.classList.contains("active") ? "55px" : "0";
+            if (carrosDestaqueTitle) {
+                carrosDestaqueTitle.style.marginTop = navbar.classList.contains("active") ? "75px" : "0";
+            }
         });
     } else {
-        console.error("Hamburger ou Navbar ou Título não encontrados!");
+        console.error("Hamburger, Navbar ou nav-links não encontrados!");
     }
 
     // =====================

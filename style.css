@@ -115,64 +115,79 @@ main {
         align-items: center;  /* Centraliza a navbar */
         transition: transform 0.8s ease-in-out;
         transform: translateY(5%); /* Efeito na navbar */
-        pointer-events: none;
     }
 
     .hamburger {
         display: flex; /* Exibe o botão hamburger em telas pequenas */
     }
 
-    /* O menu fica escondido inicialmente */
     .nav-links {
-        display: none; 
-        position: absolute;
-        top: 60px;
+        position: relative;
         left: 0;
         right: 0;
         background-color: white;
-        padding: 20px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         flex-direction: column;
-        gap: 15px;
-        justify-content: center;
         align-items: center;
-        width: 100%;
-        z-index: 1;  /* Garantir que o menu fique acima de outros elementos */
-    }
+        gap: 1.5rem;
+        padding: 2rem 0;
+        display: none;
+        margin-top: 20px;
+      }
 
     /* Quando o menu está visível */
 
     .navbar.active {
-        transform: translateY(100%);
+        transform: none;
         pointer-events: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        flex-direction: column; /* Garante que os itens fiquem em coluna em mobile */
+        padding: 10px 20px;
     }
     .navbar.active .nav-links {
-        margin-top: 18px;
         display: flex;
-        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
         top: 60px;
         left: 0;
         right: 0;
         background-color: white;
-        padding: 20px;
+        padding: 20px 0;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        flex-direction: column;
-        gap: 5px;
-        z-index: 0;
+        gap: 10px;
+        z-index: 998;
+        margin-top: 20px;
+    }
+
+    .navbar.active .nav-links .userStatus {
+        margin-top: 20px;
     }
 
     .navbar.active .nav-icons {
         display: flex;
         justify-content: center;
         gap: 25px;
-        margin-top: 45px;  /* Distância entre os ícones e o menu */
-        z-index: 0;
+        margin-top: 70px; /* Ajustado para evitar sobreposição em dispositivos menores */
+        z-index: 999;
     }
     /* Efeito do hamburger */
+
+    .hamburger {
+        margin-top: 20px; /* empurra o botão abaixo da logo */
+        z-index: 1001;
+        position: relative;
+    }
+
     .hamburger.active div:nth-child(1) {
         transform: rotate(-45deg);
         position: absolute;
-        top: 0;
+        top: 0px;
     }
 
     .hamburger.active div:nth-child(2) {
@@ -249,6 +264,7 @@ main {
     .hamburger.active div:nth-child(1) {
         transform: rotate(-45deg);
         position: absolute;
+        top: 0;
     }
 
     .hamburger.active div:nth-child(2) {
