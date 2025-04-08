@@ -15,28 +15,31 @@
                     <img src="img/logo.png" alt="Logo DriveWay">
                 </a>
             </div>
-            
+        
             <!-- Botão de hamburger (visível apenas em telas pequenas) -->
             <div class="hamburger" aria-label="Abrir menu">
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
-            
-            <!-- Menu de navegação -->
-            <ul class="nav-links" role="list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="ajuda.html">Ajuda</a></li>
+        
+            <!-- Links de navegação -->
+            <ul class="nav-links" id="menu-principal" role="menubar">
+                <li role="none"><a role="menuitem" href="ajuda.html">Ajuda</a></li>
+                <li role="none" id="userStatus" style="display: flex; align-items: center; gap: 10px;">
+                    <!-- Conteúdo preenchido via JavaScript -->
+                </li>
             </ul>
-            
-            <div class="nav-icons">
+        
+            <div class="nav-icons" id="navLoginIcon">
                 <a href="login.html" aria-label="Entrar">
-                    <img src="img/login.png" alt="Entrar">
+                    <p>Entre aqui</p>
+                    <img src="img/login.png" alt="Ícone de login" loading="lazy">
                 </a>
             </div>
         </nav>
+        
     </header>
-
     <main class="form-container">
         <figure class="form-image">
             <img src="img/img-registro.webp" alt="Imagem decorativa de registro">
