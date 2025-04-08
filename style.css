@@ -71,11 +71,26 @@
     margin-top: 15px; /* se precisar mais espaço do topo */
 }
 
+.nav-icons a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--cor-primaria); /* ou ajuste se preferir */
+    font-size: 16px;
+    font-weight: 500;
+}
+
 /* Ícones de navegação */
-.nav-icons img {
-    height: 22px;
+.nav-icons a img {
+    width: 24px;
+    height: 24px;
     filter: brightness(1);
     transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.nav-icons a p {
+    margin: 0;
 }
 
 .nav-icons img:hover {
@@ -132,7 +147,15 @@ main {
         padding: 2rem 0;
         display: none;
         margin-top: 20px;
-      }
+    }
+
+    #userStatus {
+        margin-top: 12px;
+        font-size: 18px;
+        color: #f44336; /* Vermelho bonito */
+        font-weight: 500;
+        text-align: center;
+    }
 
     /* Quando o menu está visível */
 
@@ -173,7 +196,7 @@ main {
         display: flex;
         justify-content: center;
         gap: 25px;
-        margin-top: 70px; /* Ajustado para evitar sobreposição em dispositivos menores */
+        margin-top: 90px; /* Ajustado para evitar sobreposição em dispositivos menores */
         z-index: 999;
     }
     /* Efeito do hamburger */
