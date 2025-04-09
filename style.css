@@ -31,6 +31,11 @@
     height: 30px;
 }
 
+
+header {
+    display: block;
+}
+
 /* Menu de navegação */
 .nav-links {
     list-style: none;
@@ -38,8 +43,7 @@
     gap: 24px;
     margin: 0;
     padding: 0;
-    align-items: center;
-    z-index: 1;
+    align-items: baseline;
 }
 
 /* Links de navegação */
@@ -49,8 +53,7 @@
     text-decoration: none;
     color: var(--cor-primaria);
     font-size: 16px;
-    font-weight: 500;
-    padding: 8px 14px;
+    padding: 8px 18px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
@@ -66,7 +69,6 @@
     display: flex;
     flex-direction: column; /* em mobile eles estão um embaixo do outro */
     align-items: center;
-    gap: 20px; /* aumenta o espaçamento vertical entre os ícones */
     margin-top: 15px; /* se precisar mais espaço do topo */
 }
 
@@ -82,8 +84,8 @@
 
 /* Ícones de navegação */
 .nav-icons a img {
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
     filter: brightness(1);
     transition: filter 0.3s ease, transform 0.3s ease;
 }
