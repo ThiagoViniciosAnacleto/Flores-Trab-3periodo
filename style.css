@@ -6,13 +6,12 @@
     font-family: Arial, sans-serif;
 }
 
-/* Cores (Considerar o uso de variáveis para facilitar a manutenção) */
 :root {
-    --cor-fundo: #f4f4f4;
-    --cor-texto: #333;
-    --cor-primaria: #007bff; /* Cor azul */
-    --cor-secundaria: #f7f7f7;
-    --cor-hover: #0056b3; /* Azul escuro para hover */
+    --cor-fundo: #f9fafb;                  /* fundo geral mais claro */
+    --cor-texto: #222831;                  /* texto mais escuro */
+    --cor-primaria: #3a86ff;               /* azul vibrante */
+    --cor-secundaria: #edf2f7;             /* cinza claro para áreas secundárias */
+    --cor-hover: #265dbe;                  /* azul escuro para hover */
 }
 
 /* Estilização da barra de navegação */
@@ -83,8 +82,8 @@
 
 /* Ícones de navegação */
 .nav-icons a img {
-    width: 24px;
-    height: 24px;
+    width: 14px;
+    height: 14px;
     filter: brightness(1);
     transition: filter 0.3s ease, transform 0.3s ease;
 }
@@ -112,7 +111,7 @@
 .hamburger div {
     width: 30px;
     height: 4px;
-    background-color: #333;
+    background-color: var(--cor-texto);
     transition: 0.3s;
 }
 
@@ -154,9 +153,10 @@ main {
     }
 
     #userStatus {
+        background-color: rgba(0, 0, 0, 0.75);
         margin-top: 12px;
         font-size: 18px;
-        color: #f44336; /* Vermelho bonito */
+        color: #e63946; /* Vermelho bonito */
         font-weight: 500;
         text-align: center;
     }
@@ -424,7 +424,7 @@ main {
 
 .card-carro p {
     font-size: 0.95em;
-    color: #555;
+    color: #4a5568;
 }
 
 /* Estilização dos botões */
@@ -753,4 +753,16 @@ footer {
 
 .tutorial li {
     margin-bottom: 10px;
+}
+
+
+#userStatus {
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 6px;
+    padding: 8px 14px;
+    margin-top: 12px;
+    font-size: 18px;
+    color: #e63946; /* Vermelho bonito */
+    font-weight: 500;
+    text-align: center;
 }

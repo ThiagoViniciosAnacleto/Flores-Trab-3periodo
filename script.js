@@ -113,18 +113,18 @@ document.addEventListener("DOMContentLoaded", function () {
             // Insere o nome + botão
             userStatus.innerHTML = `
                 <span style="font-weight: bold; color: #4CAF50;">Bem-vindo, ${usuarioLogado}</span>
-                <button id="logoutBtn" style="margin-left: 10px; padding: 5px 10px;">Sair</button>
+                <button id="logoutBtn" style="margin-left: 10px;">Sair</button>
             `;
 
             // Adiciona evento ao botão
             const logoutBtn = document.getElementById("logoutBtn");
             logoutBtn.addEventListener("click", () => {
                 localStorage.removeItem("userSession");
-                alert("Você saiu com sucesso.");
+                alert("Você saiu com sucesso!");
                 location.reload();
             });
         } else {
-            userStatus.textContent = "Você não está logado.";
+            userStatus.textContent = "Você não está logado!";
             userStatus.style.color = "#f44336";
         }
     }
