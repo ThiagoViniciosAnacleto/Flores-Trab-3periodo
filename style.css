@@ -200,7 +200,7 @@ main {
         display: flex;
         justify-content: center;
         gap: 25px;
-        margin-top: 90px; /* Ajustado para evitar sobreposição em dispositivos menores */
+        margin-top: 10px; /* Ajustado para evitar sobreposição em dispositivos menores */
         z-index: 999;
     }
     /* Efeito do hamburger */
@@ -260,7 +260,7 @@ main {
         display: flex;
         justify-content: center;  /* Centraliza os ícones */
         gap: 15px;
-        margin-top: 10px;  /* Distância entre os ícones e o menu */
+        margin-top: 15px;  /* Distância entre os ícones e o menu */
     }
 
     /* Ajustes para o hamburger */
