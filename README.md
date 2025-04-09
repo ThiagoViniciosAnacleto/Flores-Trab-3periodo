@@ -1,36 +1,66 @@
-# Flores-Trab-3periodo
-🚗 Login - Loja de Carros Online
-Este projeto é uma página de login para uma loja de carros online, desenvolvida com HTML, CSS e JavaScript.
+DriveWay
 
-📂 Estrutura do Projeto
-index.html → Estrutura da página de login
+Tabela de Conteúdos
+-------------------
+1. Sobre
+2. Tabela de Conteúdo
+3. Instalação
+4. Como usar
+    4.1 Pré-requisitos
+    4.2 Local files
+    4.3 Remote files
+    4.4 Multiple files
+    4.5 Combo
+5. Testes
+6. Tecnologias
 
-style.css → Estilos visuais da página
+Sobre
+-----
+O site "DriveWay" é uma plataforma fictícia voltada para a exibição e venda de veículos. Seu objetivo é apresentar de maneira clara, organizada e visualmente atraente os veículos disponíveis, fornecendo informações relevantes ao visitante, como imagens, descrições e possibilidade de contato.
 
-script.js → Lógica do formulário de login
+Tabela de Conteúdo
+------------------
+- Página inicial com introdução ao tema e menu de navegação.
+- Página de produtos com apresentação dos veículos.
+- Página "Ajuda" para o que o cliente precisar.
 
-🎯 Funcionalidades
-✅ Validação de e-mail e senha
-✅ Mensagens de erro dinâmicas
-✅ Simulação de login com usuário fictício
-✅ Redirecionamento para um dashboard após login bem-sucedido
+Instalação
+----------
+O site é totalmente desenvolvido em HTML e CSS, com arquivos locais. Para executar, basta abrir o arquivo `index.html` em um navegador.
 
-🚀 Como Usar
-Clone ou baixe este repositório
+Como usar
+---------
+### Pré-requisitos
+- Um navegador web moderno (Chrome, Firefox, Edge, etc.).
 
-Abra o arquivo index.html em um navegador
+### Local files
+- Todos os arquivos (HTML, CSS e imagens) estão armazenados localmente e organizados em pastas específicas como `css/` e `imagens/`.
 
-Use as credenciais fictícias para testar:
+### Remote files
+- Não há arquivos remotos sendo utilizados. Todo o conteúdo é local.
 
-E-mail: usuario@teste.com
+### Multiple files
+- O projeto contém múltiplos arquivos HTML: `index.html`, `produtos.html`, `sobre.html` e `contato.html`.
 
-Senha: 123456
+### Combo
+- O CSS externo é compartilhado entre todas as páginas para manter a identidade visual unificada.
 
-Caso os dados sejam inválidos, mensagens de erro serão exibidas
+Testes
+------
+- As páginas foram testadas localmente em diferentes navegadores para garantir compatibilidade e responsividade.
 
-🔧 Melhorias Futuras
-Integração com banco de dados
+Tecnologias
+-----------
+- HTML5
+- CSS3
+- JavaScript
+- Estruturação sem uso de frameworks ou bibliotecas externas
 
-Sistema de cadastro de usuários
+Status do projeto:
+-----------
+CONCLUÍDO✅✅
 
-Recuperação de senha
+Autores
+-----------
+- Matheus Vian Stoco
+- Thiago Vinicios Anacleto de Almeida Paulo
