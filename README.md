@@ -64,3 +64,4 @@ Autores
 -----------
 - Matheus Vian Stoco
 - Thiago Vinicios Anacleto de Almeida Paulo
+- Jonathan de Lima Bellato
